@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- // BÀI 1 :TÍNH TIỀN LƯƠNG NHÂN VIÊN -->
+            <div class="col-3 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        THỨ TỰ TĂNG DẦN
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="soNguyen1">Số nguyên 1:</label>
+                        <input type="number" class="form-control" id="soNguyen1" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="soNguyen2">Số nguyên 2:</label>
+                        <input type="number" class="form-control" id="soNguyen2" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="soNguyen3">Số nguyên 3:</label>
+                        <input type="number" class="form-control" id="soNguyen3" placeholder="Nhập số " />
+                    </div>
+
+                    <button type="button" onclick="giaTriTangDan()" class="btn btn-success">
+              Kết quả
+            </button>
+
+                    <div id="ketQuaTangDan" class="text-center mt-5"></div>
+                </div>
+            </div>
+
+            <!-- // BÀI 2 : CHƯƠNG TRÌNH CHÀO HỎI -->
+            <div class="col-3 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        CHƯƠNG TRÌNH CHÀO HỎI
+                    </h5>
+                    <div class="card-body"></div>
+                    <!-- import value -->
+                    <div class="form-group">
+                        <label for="question">
+                <span class="alert alert-warning">
+                  Chào bạn! bạn có thể cho tôi biết bạn là ai không?</span
+                >
+                <span>- Bố thì nhập (B) hoặc (b)</span>
+                <span>- Mẹ thì nhập (M) hoặc (m)</span>
+                <span>- Anh trai thì nhập (A) hoặc (a)</span>
+                <span>- Em thì nhập (E) hoặc (e)</span>
+              </label>
+                        <input type="text" name="name" class="form-control" id="question" placeholder="Nhập vào" />
+                    </div>
+
+                    <div class="row ml-1 mb-3">
+                        <span class="alert alert-warning">
+                Hoặc trả lời ở phía dưới !
+              </span>
+                        <div class="form-check form-check-inline col-5 flex-nowrap">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioFather" value="option1" />
+                            <label class="form-check-label" for="radioFather">Bố</label>
+                        </div>
+                        <div class="form-check form-check-inline col-5 flex-nowrap">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioMother" value="option2" />
+                            <label class="form-check-label" for="radioMother">Mẹ</label>
+                        </div>
+                        <div class="form-check form-check-inline col-5 flex-nowrap">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioBrother" value="option2" />
+                            <label class="form-check-label" for="radioBrother">Anh trai
+                </label>
+                        </div>
+
+                        <div class="form-check form-check-inline col-5 flex-nowrap">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioSister" value="option2" />
+                            <label class="form-check-label" for="radioSister">Em gái
+                </label>
+                        </div>
+                    </div>
+                    <button type="button" onclick="ask()" class="btn btn-success">
+              Kết quả
+            </button>
+
+                    <div id="resultQuestion" class="text-center mt-5"></div>
+                </div>
+            </div>
+            <!-- // BÀI 3 :CÓ BAO NHIÊU CHẲN VÀ LẺ -->
+            <div class="col-3 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        TÌM BAO NHIÊU CHẲN VÀ LẺ
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="even1">Số nguyên 1:</label>
+                        <input type="number" class="form-control" id="even1" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="even2">Số nguyên 2:</label>
+                        <input type="number" class="form-control" id="even2" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="even3">Số nguyên 3:</label>
+                        <input type="number" class="form-control" id="even3" placeholder="Nhập số " />
+                    </div>
+
+                    <button type="button" onclick="toTal()" class="btn btn-success">
+              Kết quả
+            </button>
+
+                    <div id="totalEvenOdd" class="text-center mt-5"></div>
+                </div>
+            </div>
+
+            <!-- // BÀI 4 :TÌM TAM GIÁC -->
+            <div class="col-3 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        TÌM TAM GIÁC
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="triangle1">Cạnh a:</label>
+                        <input type="number" class="form-control" id="triangle1" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle2">Cạnh b:</label>
+                        <input type="number" class="form-control" id="triangle2" placeholder="Nhập số " />
+                    </div>
+                    <div class="form-group">
+                        <label for="triangle3">Cạnh c:</label>
+                        <input type="number" class="form-control" id="triangle3" placeholder="Nhập số " />
+                    </div>
+
+                    <button type="button" onclick="triangle()" class="btn btn-success">
+              Kết quả
+            </button>
+
+                    <div id="resultTriangles" class="text-center mt-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>
